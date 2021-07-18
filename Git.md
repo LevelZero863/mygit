@@ -42,6 +42,8 @@ git remote	查看远程库信息	-v	详细信息
 
 git branch --set-upstream-to=origin/dev dev	本地dev分支与远程库的dev分支建立联系，然后可以用git pull 将远程库的dev拉入本地库
 
+git clone git@github.com:LevelZero863/mygit.git	克隆远程库
+
 #### 分支
 
 git checkout -b dev/git switch -c dev	创建分支，然后切换到dev分支
@@ -67,6 +69,24 @@ git stash pop	恢复工作区，并删除stash内容
 git stash apply stash@{0}	恢复指定工作区，并且不清空stash
 
 git cherry-pick 4c805e2	如果master分支bug修复了，但是其分支dev上相同的bug没有修复，那么在dev分支上使用该命令
+
+#### 标签
+
+git tag v1.0
+
+git tag v1.0 <commit id>
+
+git show v1.0	查看标签信息
+
+git tag -a v1.0 -m "xxxxxx" <commit id>	-a指定标签名 -m添加注释信息
+
+git tag -d v1.0 删除标签
+
+git push origin :refs/tags/v1.0	删除远程库中的标签
+
+git push origin <tagname>
+
+git push origin --tags 
 
 
 

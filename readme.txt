@@ -1,5 +1,2 @@
-Git is a distributed version control system.
-Git is free software distributed under the GPL.
-Git has a mutable index called stage.
-Git tracks changes.
-xxxx
+2021-7-20
+从昨天到现在做了三个题，easy过了，hard不会做，看了答案也一知半解，medium用动态规划要么内存超了要么时间超了，太难了...

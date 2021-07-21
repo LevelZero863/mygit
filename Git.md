@@ -6,7 +6,7 @@
 
 #### 命令
 
-git add <filename>	将指定文件添加到缓存库中
+git add <filename>	将指定文件添加到缓存库中	-A	提交所有变化 -u	提交被修改和被删除的文件	.		提交新文件和被修改的文件
 
 git commit -m "information"	将缓存库中的文件添加到版本库中
 

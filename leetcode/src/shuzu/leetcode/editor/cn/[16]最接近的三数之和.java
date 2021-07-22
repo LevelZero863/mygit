@@ -31,20 +31,19 @@ import java.util.Map;
 class Solution {
     public int threeSumClosest(int[] nums, int target) {
         Arrays.sort(nums);
-        int ret = Integer.MAX_VALUE;
+        int ret = 100000;
 
         for (int i = 0; i < nums.length - 2; i++) {
             int  right = nums.length - 1;
-            for (int j = i+1; j < right; j++) {
-                for (int k = right; k >j ; k--) {
-                    if (Math.abs(nums[i] + nums[j] + nums[k] - target) < ret)
-                        ret = nums[i] + nums[j] + nums[k];
-                    if (Math.abs(nums[i] + nums[j] + nums[k] - target) < Math.abs(nums[i] + nums[j] + nums[k-1] - target)) {
-                        right =
-                    }
-                }
+            for (int j = i+1; j < right;) {
+                if (nums[i] + nums[j] + nums[right] == target)  return target;
+                if (Math.abs(nums[i] + nums[j] + nums[right] - target) < Math.abs(ret - target))
+                    ret = nums[i] + nums[j] + nums[right];
+                if (nums[i] + nums[j] + nums[right] >= target)   right--;
+                else   j++;
             }
         }
+        return ret;
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)

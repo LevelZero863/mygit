@@ -62,35 +62,29 @@ import java.util.List;
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
-        List<List<Integer>> ll = new ArrayList<>();
-        int t = 1;
-        List<Integer> list = new ArrayList<>();
-        list.add(candidates[0]);
-        int current = candidates[0];
-        while (t >= 0) {
-            //wait to select
-            if (t < candidates.length) {
-                for (int i = 0; i < candidates.length; i++) {
-                    if(current + candidates[i] <= target) {
-                        list.add(candidates[i]);
-                        current += candidates[i];
-                        if (current == target) {
-                            ll.add(list);
-                            list.remove(candidates[i]);
-                            current -= candidates[i];
-                            t--;
-                            break;
-                        } else {
-                            t++;
-                            break;
-                        }
-                    }
-                }
-            } else {
-                t--;
-            }
+        List<List<Integer>> ans = new ArrayList<List<Integer>>();
+        List<Integer> combine = new ArrayList<Integer>();
+        dfs(candidates, target, ans, combine, 0);
+        return ans;
+    }
+
+    public void dfs(int[] candidates, int target, List<List<Integer>> ans, List<Integer> combine, int idx) {
+        if (idx == candidates.length) {
+            return;
         }
-        return ll;
+        if (target == 0) {
+            ans.add(new ArrayList<Integer>(combine));//add 的是combine的地址，所以直接add combine 的后果是，后续remove combine
+                                                    //时会同时删除ans中的内容
+            return;
+        }
+        // 直接跳过
+        dfs(candidates, target, ans, combine, idx + 1);
+        // 选择当前数
+        if (target - candidates[idx] >= 0) {
+            combine.add(candidates[idx]);
+            dfs(candidates, target - candidates[idx], ans, combine, idx);
+            combine.remove(combine.size() - 1);
+        }
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)

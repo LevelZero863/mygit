@@ -51,26 +51,55 @@ class Solution {
     public List<List<Integer>> combinationSum2(int[] candidates, int target) {
         List<List<Integer>> ans = new ArrayList<>();
         List<Integer> list = new ArrayList<>();
-        backtrack(candidates,target,ans,list,0);
+        //Arrays.sort(candidates);
+        int flag = 0;
+        for (int i = 1; i < candidates.length; i++) {
+            if (candidates[i] != candidates[i-1]){
+                flag = 1;
+                break;
+            }
+        }
+        if (flag == 1)
+            backtrack(candidates,target,ans,list,0);
+        else {
+            for (int i = 0; i < candidates.length; i++) {
+                if (target - candidates[i] >= 0) {
+                    list.add(candidates[i]);
+                    target -= candidates[i];
+                }
+            }
+            if (target == 0)
+                ans.add(new ArrayList<>(list));
+        }
+
         return ans;
     }
     public void backtrack (int[] candidates, int target, List<List<Integer>> ans, List<Integer> list, int t) {
-        if (t >= candidates.length) return;
+
         if (target == 0) {
             if (!ans.contains(list))
                 ans.add(new ArrayList<>(list));
             return;
         }
+        if (t >= candidates.length) return;
         for (int i = t; i < candidates.length; i++) {
             if (target - candidates[i] >= 0) {
-                int temp = candidates[i];
-                candidates[i] = candidates[t];
-                candidates[t] = temp;
-                list.add(candidates[t]);
-                backtrack(candidates,target - candidates[t],ans,list,t+1);
-                candidates[t] = candidates[i];
-                candidates[i] = temp;
-                list.remove(list.size()-1);
+                if (list.isEmpty() || candidates[i] >= list.get(list.size() - 1) ) {
+                    int temp = candidates[i];
+                    candidates[i] = candidates[t];
+                    candidates[t] = temp;
+                    list.add(candidates[t]);
+                    //calculate the lower bound
+                    int sum = 0;
+                    for (int j = t+1; j < candidates.length; j++) {
+                        sum += candidates[j];
+                    }
+                    if (sum >= target - candidates[t]) // check
+                        backtrack(candidates,target - candidates[t],ans,list,t+1);
+                    candidates[t] = candidates[i];
+                    candidates[i] = temp;
+                    list.remove(list.size()-1);
+                }
             }
         }
     }

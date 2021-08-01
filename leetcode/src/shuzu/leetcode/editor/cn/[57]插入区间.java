@@ -57,12 +57,57 @@ package shuzu.leetcode.editor.cn;
 // 👍 458 👎 0
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
     public int[][] insert(int[][] intervals, int[] newInterval) {
-
+        int[][] sumIntervals = new int[intervals.length+1][2];
+        //find the place to insert
+        int p = 0;
+        int flag = 0;
+        for (int i = 0; i < intervals.length; i++) {
+            if (newInterval[0] <= intervals[i][0]) {
+                p = i;
+                flag = 1;
+                break;
+            }
+//            if (newInterval[0] < intervals[0][0]) {
+//                p = 0;
+//                break;
+//            }
+//            if (newInterval[0] > intervals[intervals.length-1][0]) {
+//                p = intervals.length;
+//                break;
+//            }
+//            if (newInterval[0] >= intervals[i][0] && newInterval[0] <= intervals[i+1][0]) {
+//                p = i + 1;
+//                break;
+//            }
+        }
+        if (flag == 0) p = intervals.length;
+        for (int i = 0,j = 0; i < sumIntervals.length; i++,j++) {
+            if (i == p) {
+                sumIntervals[i][0] = newInterval[0];
+                sumIntervals[i][1] = newInterval[1];
+                j--;
+            } else {
+                sumIntervals[i][0] = intervals[j][0];
+                sumIntervals[i][1] = intervals[j][1];
+            }
+        }
+        int k = 0;
+        for (int i = 1; i < sumIntervals.length; i++) {
+            if (sumIntervals[i][0] <= sumIntervals[k][1]) {
+                if (sumIntervals[i][1] > sumIntervals[k][1])
+                    sumIntervals[k][1] = sumIntervals[i][1];
+            } else {
+                sumIntervals[++k][0] = sumIntervals[i][0];
+                sumIntervals[k][1] = sumIntervals[i][1];
+            }
+        }
+        return Arrays.copyOfRange(sumIntervals,0,k+1);
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)

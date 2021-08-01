@@ -47,32 +47,34 @@ class Solution {
         int bound4 = 1;
         ans.add(matrix[0][0]);
         int x = 0,y = 0;
+        int first = 1;
         while (true) {
             if (flag == 1) {
-                if (y <= bound1) break;
+                if (y >= bound1&& first == 0) break;
+                first = 0;
                 for (int i = y + 1; i <= bound1; i++)
                     ans.add(matrix[x][i]);
                 y = bound1;
                 bound1--;
                 flag = 2;
             } else if (flag == 2) {
-                if (x <= bound2) break;
+                if (x >= bound2) break;
                 for (int i = x + 1; i <= bound2; i++)
                     ans.add(matrix[i][y]);
                 x = bound2;
                 bound2--;
                 flag = 3;
             } else if (flag == 3) {
-                if (y >= bound3) break;
+                if (y <= bound3) break;
                 for (int i = y - 1; i >= bound3 ; i--)
                     ans.add(matrix[x][i]);
                 y = bound3;
                 bound3++;
                 flag = 4;
             } else {
-                if (x >= bound4) break;
+                if (x <= bound4) break;
                 for (int i = x - 1; i >= bound4 ; i--)
-                    ans.add(matrix[x][y--]);
+                    ans.add(matrix[i][y]);
                 x = bound4;
                 bound4++;
                 flag = 1;

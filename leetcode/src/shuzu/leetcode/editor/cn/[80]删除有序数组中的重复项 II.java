@@ -65,10 +65,18 @@ class Solution {
         while (j < nums.length) {
             if (nums[j] == current) {
                 count ++;
+                j++;
             } else {
-
+                nums[i++] = nums[j++];
+                count = 1;
+                current = nums[i - 1];
+            }
+            if (count == 2) {
+                nums[i] = nums[i - 1];
+                i++;
             }
         }
+        return i;
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)

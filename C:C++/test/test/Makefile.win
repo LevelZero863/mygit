@@ -1,0 +1,46 @@
+# Project: Project2
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = main.o guess.o makenumber.o IsRight.o RightEvaluation.o WrongEvaluation.o Untitled1.o makeop.o
+LINKOBJ  = main.o guess.o makenumber.o IsRight.o RightEvaluation.o WrongEvaluation.o Untitled1.o makeop.o
+LIBS     = -L"D:/Dev-Cpp/MinGW64/lib" -L"D:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"D:/Dev-Cpp/MinGW64/include" -I"D:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"D:/Dev-Cpp/MinGW64/include" -I"D:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"D:/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = Project2.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)
+
+guess.o: guess.c
+	$(CC) -c guess.c -o guess.o $(CFLAGS)
+
+makenumber.o: makenumber.c
+	$(CC) -c makenumber.c -o makenumber.o $(CFLAGS)
+
+IsRight.o: IsRight.c
+	$(CC) -c IsRight.c -o IsRight.o $(CFLAGS)
+
+RightEvaluation.o: RightEvaluation.c
+	$(CC) -c RightEvaluation.c -o RightEvaluation.o $(CFLAGS)
+
+WrongEvaluation.o: WrongEvaluation.c
+	$(CC) -c WrongEvaluation.c -o WrongEvaluation.o $(CFLAGS)
+
+makeop.o: makeop.c
+	$(CC) -c makeop.c -o makeop.o $(CFLAGS)

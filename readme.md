@@ -1,3 +1,43 @@
+##### 2021-10-5
+
+国庆节首学：
+
+关于Iterator 类：主要用于容器的遍历等操作
+
+1. 使用
+
+   ```java
+   List list = new ArrayList<Integer>{};
+   list.add(12);
+   Iterator iterator = list.iterator();
+   ```
+
+   
+
+##### 2021-9-29
+
+java中的异或运算符号：^
+
+1. 任何数和 00 做异或运算，结果仍然是原来的数，即 a⊕0=a*a*⊕0=*a*。
+2. 任何数和其自身做异或运算，结果是 00，即 a⊕a=0*a*⊕*a*=0。
+3. 异或运算满足交换律和结合律
+
+HashMap实际操作：
+
+```java
+//初始化
+Map<Integer,Integer> hashMap = new HashMap<>();
+//添加值，num是key，getOrDefault(num,0)取key为num的value，如若没有，则取默认值0
+hashMap.put(num,hashMap.getOrDefault(num,0));
+//遍历
+for(Map.Entry<Integer,Integer> entry : hashMap.entrySet()){
+  int num = entry.getKey();
+  int occ = entry.getValue();
+}
+```
+
+
+
 ##### 2021-9-14
 
 1.哈希表常用类及其用法

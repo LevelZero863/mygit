@@ -1,3 +1,37 @@
+##### 2021-10-9
+
+TreeMap
+
+1. 什么是TreeMap？与HashMap相比，TreeMap是一个能比较元素大小的Map集合，会对传入的key进行大小排序。其中，可以使用元素的自然排序，也可以使用集合中自定义的比较器来进行排序。
+
+2. 基本操作
+
+   ```java
+   //创建TreeMap对象
+   TreeMap<String,Integer> treeMap = new TreeMap<String,Integer>();
+   //新增元素
+   treeMap.put("hello",1);
+   //遍历元素
+   Set<Map.Entry<String,Integer>> entrySet = treeMap.entrySet();
+   for(Map.Entry<String,Integer> entry : entrySet){
+     String key = entry.getKey();
+     Integer Value = entry.getValue();
+   } 
+   //获取所有的key：
+   Set<String> keySet = treeMap.keySet();        for(String strKey:keySet){            			 	      System.out.println("TreeMap集合中的key:"+strKey);
+   }
+   //获取所有的value:
+   Collection<Integer> valueList = treeMap.values();        for(Integer intValue:valueList){
+      System.out.println("TreeMap集合中的value:" + intValue);
+   }
+   ```
+
+   
+
+##### 2021-10-8
+
+每日一题还是哈希表的应用
+
 ##### 2021-10-5
 
 国庆节首学：

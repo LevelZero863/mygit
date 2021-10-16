@@ -206,6 +206,15 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/shuzu/leetcode/editor/cn/[282]给表达式添加运算符.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/shuzu/leetcode/editor/cn/doc/content/[282]给表达式添加运算符.md" />
+              <option name="path" value="$PROJECT_DIR$/src/shuzu/leetcode/editor/cn/[282]给表达式添加运算符.java" />
+              <option name="questionId" value="282" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/shuzu/leetcode/editor/cn/[284]顶端迭代器.java">
           <value>
             <LeetcodeEditor>

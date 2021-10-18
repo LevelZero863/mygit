@@ -392,6 +392,15 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/shuzu/leetcode/editor/cn/[476]数字的补数.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/shuzu/leetcode/editor/cn/doc/content/[476]数字的补数.md" />
+              <option name="path" value="$PROJECT_DIR$/src/shuzu/leetcode/editor/cn/[476]数字的补数.java" />
+              <option name="questionId" value="476" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/shuzu/leetcode/editor/cn/[47]全排列 II.java">
           <value>
             <LeetcodeEditor>

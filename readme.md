@@ -1,3 +1,58 @@
+##### 2021-10-19
+
+字典树
+
+1. 什么是字典树？
+
+   字典树（前缀树）是一种树形数据结构，用于高效地存储和检索字符串数据集中的键。
+
+2. 用于解决什么问题？
+
+   1. 串的快速检索问题：给出N个单词组成的熟词表，以及一篇全用小写英文书写的文章，请你按最早出现的顺序写出所有不再熟词表中的生词。在这道题中，我们可以用字典树，先把熟词建一棵树，然后读入文章进行比较。
+   2. 串排序问题：给定N个互不相同的仅由一个单词构成的英文名，让你将他们按字典序从小到大输出用字典树进行排序，采用数组的方式创建字典树，这棵树的每个结点的所有儿子很显然地按照其字母大小排序。对这棵树进行先序遍历即可。
+   3. 最长公共前缀问题：对所有串建立字典树，对于两个串的最长公共前缀的长度即他们所在的结点的公共祖先个数，于是，问题就转化为最近公共祖先问题。
+
+3. 图形化结构？
+
+   ![image-20211019154725728](/Users/gaoyinghao/Library/Application Support/typora-user-images/image-20211019154725728.png)
+
+4. 数据结构
+
+   ```java
+   class Trie {
+       private Trie[] children;
+       private boolean isEnd;
+   
+       public Trie() {
+           children = new Trie[26];
+           isEnd = false;
+       }
+       
+       public void insert(String word) {
+           Trie node = this;
+           for (int i = 0; i < word.length(); i++) {
+               char ch = word.charAt(i);
+               int index = ch - 'a';
+               if (node.children[index] == null) {
+                   node.children[index] = new Trie();
+               }
+               node = node.children[index];
+           }
+           node.isEnd = true;
+       }
+   
+       public Trie[] getChildren() {
+           return children;
+       }
+   
+       public boolean isEnd() {
+           return isEnd;
+       }
+   }
+   ```
+
+   
+
 ##### 2021-10-18
 
 位运算还是不熟练啊

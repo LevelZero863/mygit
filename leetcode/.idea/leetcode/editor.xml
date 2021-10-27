@@ -269,6 +269,15 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/shuzu/leetcode/editor/cn/[301]删除无效的括号.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/shuzu/leetcode/editor/cn/doc/content/[301]删除无效的括号.md" />
+              <option name="path" value="$PROJECT_DIR$/src/shuzu/leetcode/editor/cn/[301]删除无效的括号.java" />
+              <option name="questionId" value="301" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/shuzu/leetcode/editor/cn/[31]下一个排列.java">
           <value>
             <LeetcodeEditor>
@@ -468,6 +477,15 @@
               <option name="contentPath" value="$PROJECT_DIR$/src/shuzu/leetcode/editor/cn/doc/content/[492]构造矩形.md" />
               <option name="path" value="$PROJECT_DIR$/src/shuzu/leetcode/editor/cn/[492]构造矩形.java" />
               <option name="questionId" value="492" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/shuzu/leetcode/editor/cn/[496]下一个更大元素 I.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/shuzu/leetcode/editor/cn/doc/content/[496]下一个更大元素 I.md" />
+              <option name="path" value="$PROJECT_DIR$/src/shuzu/leetcode/editor/cn/[496]下一个更大元素 I.java" />
+              <option name="questionId" value="496" />
             </LeetcodeEditor>
           </value>
         </entry>

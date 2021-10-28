@@ -9,10 +9,10 @@
 using namespace::std;
 int main(int argc, const char * argv[]) {
     // insert code here...
-    int sum = 0,num = 0;
-    while (cin>>num) {
-        sum+=num;
+    int num = 1;
+    while (num < 10e9) {
+        cout<<num<<endl;
+        num *= 2;
     }
-    cout<<sum<<endl;
     return 0;
 }

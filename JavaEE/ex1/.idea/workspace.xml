@@ -7,29 +7,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f766890c-51dd-4924-b3c6-c48caae93a1b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/ex1_war_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ex1.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CodeReturn.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FirstServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SelectBeerServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ShowBrownBeer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ShowDarkBeer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TestInitParams.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/bookCode.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/codereturn.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/select.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../leetcode/src/shuzu/leetcode/editor/cn/[335]路径交叉.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../leetcode/src/shuzu/leetcode/editor/cn/doc/content/[335]路径交叉.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../C:C++/cpp-learn/Chapter1/HelloWorld/HelloWorld.xcodeproj/project.xcworkspace/xcuserdata/gaoyinghao.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/../../C:C++/cpp-learn/Chapter1/HelloWorld/HelloWorld.xcodeproj/project.xcworkspace/xcuserdata/gaoyinghao.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ex2/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ex2/.idea/artifacts/ex2_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ex2/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ex2/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ex2/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ex2/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ex2/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ex2/ex2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ex2/src/BeerAddedListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ex2/src/ShoppingCart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ex2/src/ShowBrownBeer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ex2/src/ShowDarkBeer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ex2/src/package1/StatisticInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ex2/src/package2/Beer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ex2/web/BeerList.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ex2/web/DisplayItem.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ex2/web/Header_act.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ex2/web/Header_ins.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ex2/web/SelectBeer.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ex2/web/SelectedBeerColor.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ex2/web/ShowAmberBeer.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ex2/web/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ex2/web/image/java.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../leetcode/leetcode/editor/cn/[520]检测大写字母.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../leetcode/leetcode/editor/cn/doc/content/[520]检测大写字母.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../leetcode/.idea/leetcode/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../leetcode/.idea/leetcode/editor.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../leetcode/src/shuzu/leetcode/editor/cn/doc/all.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../leetcode/src/shuzu/leetcode/editor/cn/doc/all.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../leetcode/src/shuzu/leetcode/editor/cn/doc/translation.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../leetcode/src/shuzu/leetcode/editor/cn/doc/translation.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../leetcode/leetcode/editor/cn/[598]范围求和 II.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../leetcode/leetcode/editor/cn/[598]范围求和 II.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../leetcode/leetcode/editor/cn/doc/all.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../leetcode/leetcode/editor/cn/doc/all.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../leetcode/leetcode/editor/cn/doc/translation.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../leetcode/leetcode/editor/cn/doc/translation.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,6 +194,7 @@
       <workItem from="1636179223196" duration="5199000" />
       <workItem from="1636184543490" duration="581000" />
       <workItem from="1636265092372" duration="504000" />
+      <workItem from="1636801704313" duration="55000" />
     </task>
     <servers />
   </component>

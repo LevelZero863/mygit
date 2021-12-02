@@ -18,11 +18,11 @@
 <form method="POST" action="BeerList.jsp">
 This application has been visited  
 <mytag:counter/>
-  times.<p> 
+  times.<p>
   There are kinds of beer for choose.<p>
 <mytag:colorSelect/>
   <div style="text-align: center;">
-    <input type="SUBMIT" value="Submit"> 
+    <input type="SUBMIT" value="Submit">
   </div>
 </form>
 </body>

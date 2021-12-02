@@ -3,6 +3,42 @@
   <component name="LeetcodeEditor">
     <option name="projectConfig">
       <map>
+        <entry key="$PROJECT_DIR$/editor/cn/[1446]连续字符.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/editor/cn/doc/content/[1446]连续字符.md" />
+              <option name="path" value="$PROJECT_DIR$/editor/cn/[1446]连续字符.java" />
+              <option name="questionId" value="1542" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/editor/cn/[2]两数相加.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/editor/cn/doc/content/[2]两数相加.md" />
+              <option name="path" value="$PROJECT_DIR$/editor/cn/[2]两数相加.java" />
+              <option name="questionId" value="2" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/editor/cn/[400]第 N 位数字.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/editor/cn/doc/content/[400]第 N 位数字.md" />
+              <option name="path" value="$PROJECT_DIR$/editor/cn/[400]第 N 位数字.java" />
+              <option name="questionId" value="400" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/editor/cn/[506]相对名次.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/editor/cn/doc/content/[506]相对名次.md" />
+              <option name="path" value="$PROJECT_DIR$/editor/cn/[506]相对名次.java" />
+              <option name="questionId" value="506" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/leetcode/editor/cn/[520]检测大写字母.java">
           <value>
             <LeetcodeEditor>
@@ -388,6 +424,15 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/shuzu/leetcode/editor/cn/[400]第 N 位数字.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/editor/cn/doc/content/[400]第 N 位数字.md" />
+              <option name="path" value="$PROJECT_DIR$/editor/cn/[400]第 N 位数字.java" />
+              <option name="questionId" value="400" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/shuzu/leetcode/editor/cn/[40]组合总和 II.java">
           <value>
             <LeetcodeEditor>
@@ -654,6 +699,15 @@
             <LeetcodeEditor>
               <option name="path" value="$PROJECT_DIR$/src/shuzu/leetcode/editor/cn/[77]组合.java" />
               <option name="questionId" value="77" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/shuzu/leetcode/editor/cn/[786]第 K 个最小的素数分数.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/shuzu/leetcode/editor/cn/doc/content/[786]第 K 个最小的素数分数.md" />
+              <option name="path" value="$PROJECT_DIR$/src/shuzu/leetcode/editor/cn/[786]第 K 个最小的素数分数.java" />
+              <option name="questionId" value="802" />
             </LeetcodeEditor>
           </value>
         </entry>

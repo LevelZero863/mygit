@@ -3,6 +3,15 @@
   <component name="LeetcodeEditor">
     <option name="projectConfig">
       <map>
+        <entry key="$PROJECT_DIR$/editor/cn/[1005]K 次取反后最大化的数组和.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/editor/cn/doc/content/[1005]K 次取反后最大化的数组和.md" />
+              <option name="path" value="$PROJECT_DIR$/editor/cn/[1005]K 次取反后最大化的数组和.java" />
+              <option name="questionId" value="1047" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/editor/cn/[1446]连续字符.java">
           <value>
             <LeetcodeEditor>
@@ -18,6 +27,15 @@
               <option name="contentPath" value="$PROJECT_DIR$/editor/cn/doc/content/[2]两数相加.md" />
               <option name="path" value="$PROJECT_DIR$/editor/cn/[2]两数相加.java" />
               <option name="questionId" value="2" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/editor/cn/[383]赎金信.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/editor/cn/doc/content/[383]赎金信.md" />
+              <option name="path" value="$PROJECT_DIR$/editor/cn/[383]赎金信.java" />
+              <option name="questionId" value="383" />
             </LeetcodeEditor>
           </value>
         </entry>

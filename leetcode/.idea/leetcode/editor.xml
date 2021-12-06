@@ -21,12 +21,30 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/editor/cn/[1816]截断句子.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/editor/cn/doc/content/[1816]截断句子.md" />
+              <option name="path" value="$PROJECT_DIR$/editor/cn/[1816]截断句子.java" />
+              <option name="questionId" value="1944" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/editor/cn/[2]两数相加.java">
           <value>
             <LeetcodeEditor>
               <option name="contentPath" value="$PROJECT_DIR$/editor/cn/doc/content/[2]两数相加.md" />
               <option name="path" value="$PROJECT_DIR$/editor/cn/[2]两数相加.java" />
               <option name="questionId" value="2" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/editor/cn/[372]超级次方.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/editor/cn/doc/content/[372]超级次方.md" />
+              <option name="path" value="$PROJECT_DIR$/editor/cn/[372]超级次方.java" />
+              <option name="questionId" value="372" />
             </LeetcodeEditor>
           </value>
         </entry>

@@ -1,3 +1,24 @@
+**2022-1-14**
+
+优先队列的C++实现与应用问题
+
+-----------------------
+
+优先队列：最高优先级先出
+
+```c++
+#include<queue>
+//Type 就是数据类型，Container 就是容器类型（Container必须是用数组实现的容器，比如vector,deque等等，但不能用 list。STL里面默认用的是vector），Functional 就是比较的方式。
+define：priority_queue<Type,Container,Functional>
+//升序队列
+  priority_queue <int,vector<int>,greater<int> > q;
+//降序队列
+	priority_queue <int,vector<int>,less<int>> q;
+
+```
+
+Lambda表达式
+
 ##### 2021-12-6
 
 1. 快速幂：指的是降低复杂度求幂的算法。有递归和迭代两种写法。

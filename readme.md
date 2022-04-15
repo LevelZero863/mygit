@@ -1,23 +1,35 @@
+##### 2022-4-15
+
+关于二分查找：[https://zhuanlan.zhihu.com/p/79553968]()
+
+##### 2022-4-13
+
+1. 牛顿迭代法：是一种可以用来快速求解函数零点的方法。
+
+![image-20220413153847975](/Users/gaoyinghao/Library/Application Support/typora-user-images/image-20220413153847975.png)
+
+2. ![image-20220413141228494](/Users/gaoyinghao/Library/Application Support/typora-user-images/image-20220413141228494.png)
+
+##### 2022-4-12
+
+```C++
+unordered_map <char, int> ori, cnt;
+for (const auto &p: ori) {
+            if (cnt[p.first] < p.second) {
+                return false;
+            }
+        }
+```
+
+这段代码，指针p的first指向char位置，second指向int位置
+
 **2022-1-14**
 
 优先队列的C++实现与应用问题
 
------------------------
+总结于该文章
 
-优先队列：最高优先级先出
-
-```c++
-#include<queue>
-//Type 就是数据类型，Container 就是容器类型（Container必须是用数组实现的容器，比如vector,deque等等，但不能用 list。STL里面默认用的是vector），Functional 就是比较的方式。
-define：priority_queue<Type,Container,Functional>
-//升序队列
-  priority_queue <int,vector<int>,greater<int> > q;
-//降序队列
-	priority_queue <int,vector<int>,less<int>> q;
-
-```
-
-Lambda表达式
+> [Lambda表达式的简单使用和C++Priority_queue（优先队列）的使用总结 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/459445739)
 
 ##### 2021-12-6
 

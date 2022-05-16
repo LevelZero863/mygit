@@ -7,9 +7,10 @@
 #include <ctime>
 #include <cmath>
 #include <string>
+
 using namespace std;
 //测试类1
-const class GamePlayer {
+class GamePlayer {
 private:
     static const int NumTurns = 5;
     mutable int user;
@@ -55,7 +56,7 @@ bool isBigger (const int& a,const int& b) {
     return a>b;
 }
 void testSort() {
-    vector<int> arr = {56,4,3,15,16,35,12};
+    vector<int> arr{1,3};
     sort(arr.begin(),arr.end(),[](const int& a,const int& b){
         return a>b;
     });
@@ -134,5 +135,5 @@ void testEndian(){
 }
 
 int main() {
-
-}
+    testEndian(); 
+}   

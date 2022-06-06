@@ -7,7 +7,9 @@
 #include <ctime>
 #include <cmath>
 #include <string>
-
+#include <map>
+#include <set>
+#include <iterator>
 using namespace std;
 //测试类1
 class GamePlayer {
@@ -133,7 +135,58 @@ void testEndian(){
     else
         cout<<"big-endian"<<endl;
 }
+bool compareMap(const size_t & a,const size_t& b) {
+    return a>b;
+}
+void testMap(){
+    // map<string,size_t> word_count;
+    // string word;
+    // int count=5;
+    // for (const auto& w: word_count) 
+    //     cout<<w.first<<"occurs"<<w.second
+    //         <<((w.second>1)?"times":"time")<<endl;
+    multimap<size_t,size_t> mp;
+    mp = {{2,4},{1,7},{1,3},{6,5},{4,2},{4,9},{4,3},{4,10},{2,6},{2,2}};
+    
+    const auto [lb,ub] = mp.equal_range(1);
+    auto dis = distance(lb,ub);
+    cout<<dis;
+}
 
+bool comparePair(const pair<size_t,size_t>& p1,const pair<size_t,size_t>& p2) {
+    if (p1.first!=p2.first) {
+        return p1.first<p2.first;
+    }else {
+        return p1.second<p2.second;
+    }
+}
+bool compareInt(const size_t a,const size_t b) {
+    return a>b;
+}
+void testSet(){
+    // set<pair<int,int>> visited;
+    // visited.insert(make_pair(3,5));
+    // if (visited.find({3,5})!=visited.end()) {
+    //     cout<<"{3,5} is found"<<endl;
+    // } 
+    // if (visited.find({3,1})!=visited.end()) {
+    //     cout<<"{3,1} is found"<<endl;
+    // }
+    multiset<pair<size_t,size_t>,decltype(comparePair)*> mset(comparePair);
+    vector<pair<size_t,size_t>> vec;
+    vec = {{2,4},{1,7},{1,3},{6,5},{4,2},{4,9},{4,3},{4,10},{2,6},{2,2}};
+    //mset.insert(vec.cbegin(),vec.cend());//correct
+    mset = {{2,4},{1,7},{1,3},{6,5},{4,2},{4,9},{4,3},{4,10},{2,6},{2,2}};//correct
+    //multiset<pair<size_t,size_t>,decltype(comparePair)*> mset(vec.cbegin(),vec.cend(),comparePair);//correct
+    
+    const auto [lb,ub] = mset.equal_range(make_pair(2,4));
+    cout << distance(lb,ub);
+    
+    // for (auto m:mset) {
+    //     cout<<m.first<<" "<<m.second<<endl; 
+    // }
+
+}
 int main() {
-    testEndian(); 
+    testMap();
 }   

@@ -544,28 +544,33 @@ namespace l739
     class Solution {
     public:
         vector<int> dailyTemperatures(vector<int>& temperatures) {
+            stack<int> st1,st2;
             vector<int> ans(temperatures.size());
-            stack<int> st;
-            st.push(temperatures[0]);
-            unordered_map<int,int> m;
-            for(int i =0;i<temperatures.size();++i) {
-                m[temperatures[i]] = i;
-            }
-            int i=1;
-            while (i<temperatures.size()) {
-                if (st.empty()) st.push(temperatures[i++]);
-                int tp = st.top();
-                if (temperatures[i]<tp) st.push(temperatures[i++]);
-                else {
-                    int index = m[tp];
+            st1.push(temperatures[0]);
+            st2.push(0);
+            int i = 1;
+            while(i<temperatures.size() ) {
+                if (st1.empty()) {
+                    st1.push(temperatures[i]);
+                    st2.push(i);
+                    ++i;
+                    continue;
+                }
+                int tp = st1.top();
+                if (temperatures[i]<=tp) {
+                    st1.push(temperatures[i]);
+                    st2.push(i);
+                    ++i;
+                } else {
+                    int index = st2.top();
                     ans[index] = i-index;
-                    st.pop();
+                    st1.pop();
+                    st2.pop(); 
                 }
             }
-            while (!st.empty()) {
-                int index = m[st.top()];
-                st.pop();
-                ans[index] = 0;
+            while(!st2.empty()) {
+                ans[st2.top()] = 0;
+                st2.pop();
             }
             return ans;
         }

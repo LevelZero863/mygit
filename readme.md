@@ -1,6 +1,23 @@
-##### 2022-5-23:
+##### 2022-6-6:
 
+- 指针的使用需要初始化，否则会产生未定义行为
 
+  ```c++
+  int* p;//error
+  int* q;
+  q=existInt;//existInt是一个存在的指针，此时意图给q赋值，error
+  int* t = NULL;//true
+  int* tt = new int(9);//true;
+  int8 ttt = existInt;//true;
+  ```
+
+- NULL与nullptr的区别
+
+​		NULL是C语言中定义的宏：#define NULL ((void*) 0)
+
+​		使用NULL容易产生二义性问题，NULL可能会被解析成指针类型或者非指针类型
+
+​		而nullptr是C++11标准引入的，它只会被解析成指针类型
 
 ##### 2022-5-4:
 

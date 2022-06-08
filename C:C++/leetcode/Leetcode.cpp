@@ -576,8 +576,123 @@ namespace l739
         }
 };
 } // namespace l739
+namespace l23
+{
+    struct ListNode{
+        int val;
+        ListNode *next;
+        ListNode() : val(0), next(nullptr) {}
+        ListNode(int x) : val(x), next(nullptr) {}
+        ListNode(int x, ListNode *next) : val(x), next(next) {}
+    };
+    class Solution {
+    public:
+        ListNode* mergeKLists(vector<ListNode*>& lists) {
+            if (lists.empty()) return nullptr;
+            auto cmp = [](const ListNode* l1,const ListNode* l2) {
+                return l1->val>l2->val;
+            };
+            priority_queue<ListNode*,vector<ListNode*>,decltype(cmp)> pq(cmp);
+            for (ListNode* ln:lists) {
+                while(ln) {
+                    pq.push(ln);
+                    ln=ln->next;
+                }
+            }
+            ListNode* now = new ListNode(0);
+            ListNode* ans = now;
+            while(!pq.empty() ) {
+                now->next=pq.top();
+                now=now->next;
+                now->next=NULL;
+                pq.pop();
+            }
+            return ans->next;
+        }
+};
+} // namespace l23
+namespace l218
+{
+    class Solution {
+    public:
+        vector<vector<int>> getSkyline(vector<vector<int>>& buildings) {
+            vector<vector<int>> ans;
+            priority_queue<pair<int,int>> max_heap;
+            int i =0,len=buildings.size();
+            int cur_x,cur_h;
+            while(i<len||!max_heap.empty()) {
+                if (max_heap.empty()||i<len&&buildings[i][0]<=max_heap.top().second) {
+                    cur_x = buildings[i][0];
+                    while(i<len&&cur_x==buildings[i][0]){
+                        max_heap.emplace(buildings[i][2],buildings[i][1]);
+                        ++i;
+                    }
+                } else {
+                    cur_x = max_heap.top().second;
+                    while(!max_heap.empty()&&cur_x>=max_heap.top().second) {
+                        max_heap.pop();
+                    }
+                }
+                cur_h = (max_heap.empty())?0:max_heap.top().first;
+                if(ans.empty()||cur_h != ans.back()[1]) {
+                    ans.push_back({cur_x,cur_h});
+                }
+            }
+            return ans;
+        }
+};
+} // namespace l218
+namespace l241
+{
+    class Solution {
+    public:
+        vector<int> diffWaysToCompute(string expression) {
+            
+            int count =0;
+            vector<int> index;
+            vector<int> ans;
+            for(int i =0;i<expression.size();++i) 
+                if (expression.at(i)=='+'||expression.at(i)=='-'||expression.at(i)=='*') {
+                    ++count;
+                    index.push_back(i);
+                }
+            if (count==0) {
+                ans.push_back(expression[0]-'0');
+            }else if (count==1) {
+                int c=0;//运算符
+                int a=0;
+                vector<int> b;
+                for (int i=0;i<expression.size();++i) {
+                    if (expression.at(i)=='+'||expression.at(i)=='-'||expression.at(i)=='*') {
+                        b.push_back(a);
+                        a=0;
+                        c=i;
+                        continue;
+                    }
+                    a=a*10+(expression.at(i)-'0');
+                }
+                if (expression.at(c)=='+') ans.push_back(b[0]+a);
+                else if(expression.at(c)=='-' ) ans.push_back(b[0]-a);
+                else ans.push_back(b[0]*a);
+            }else {
+                for(int i =0 ;i<count;++i) {
+                    vector<int> l,r;
+                    l=diffWaysToCompute(expression.substr(0,index[i]));
+                    r=diffWaysToCompute(expression.substr(index[i]+1,expression.size()-index[i]));
+                    for (int j=0;j<l.size();++j) {
+                        for (int k=0;k<r.size();++k) {
+                            if (expression.at(index[i])=='+') ans.push_back(l[j]+r[k]);
+                            else if (expression.at(index[i])=='-') ans.push_back(l[j]-r[k]);
+                            else ans.push_back(l[j]*r[k]);
+                        }
+                    }
+                }
+            }
+            return ans;
+        }
+    };
+} // namespace l241
 
 int main(){
-    set<pair<int,int>> s;
-    
- }
+  
+}

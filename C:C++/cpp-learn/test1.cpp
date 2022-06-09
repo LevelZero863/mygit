@@ -10,6 +10,7 @@
 #include <map>
 #include <set>
 #include <iterator>
+#include <stack>
 using namespace std;
 //测试类1
 class GamePlayer {
@@ -187,6 +188,15 @@ void testSet(){
     // }
 
 }
+/**
+ * 假设存在一个序列「3，6，8，1，5，4」，求每个元素右起第一个大于自己的元素
+ * 最终要得到一个新的序列，序列是一组下标，大小与求解序列一致。
+ */
 int main() {
-    testMap();
+    vector<int> list{3,6,8,1,5,4};
+    stack<int> st;
+    //逻辑上我们需要在栈里存实际的元素，实操上一般存元素的下标，原因？
+    for(int i=0;i<list.size();++i) {
+        
+    }
 }   

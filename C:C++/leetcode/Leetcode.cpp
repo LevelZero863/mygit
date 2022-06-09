@@ -17,6 +17,7 @@
 #include<string.h>
 #include<stack>
 #include<queue>
+#include<unordered_set>
 using namespace std;
 
 namespace l416{
@@ -692,6 +693,85 @@ namespace l241
         }
     };
 } // namespace l241
+namespace l932
+{
+    class Solution {
+    public:
+        vector<int> beautifulArray(int n) {
+            vector<int> ans;
+            if (n==1) {
+                ans = {1};
+                return ans;
+            } 
+            if (n==2) {
+                ans = {1,2};
+                return ans;
+            }
+            int left;
+            if (n%2==0) left=n/2;
+            else left = n/2+1;
+            vector<int> ansLeft = beautifulArray(left);
+            vector<int> ansRight = beautifulArray(n/2);
+            
+            for (int a:ansLeft) {
+                ans.push_back(a*2-1);
+            }
+            for (int a:ansRight) {
+                ans.push_back(a*2);
+            }
+            return ans;
+        }
+};
+} // namespace l932
+namespace l504
+{
+    class Solution {
+    public:
+        string convertToBase7(int num) {
+            stack<int> st;
+            string ans;
+            if (num<0) {
+                num = -num;
+                ans.append("-");
+            }
+            while(num>=7) {
+                st.push(num%7);
+                num/=7;
+            }
+            
+            while(!st.empty()) {
+                ans.append(to_string(st.top()));
+                st.pop();
+            }
+            return ans;
+        }
+};
+} // namespace l504
+namespace l172
+{
+    class Solution {
+    public:
+        int trailingZeroes(int n) {
+            vector<int> result{1};
+            for (int i=2;i<=n;++i) {
+                
+            }
+        }
+        vector<int>& func(vector<int> &ve,int n) {
+            vector<int> cc(ve);            
+            int len = ve.size();
+            int temp=0;
+            int num =0;
+            for(int i=len-1;i>=0;--i) {
+                num = temp+cc[i]*n;
+                cc[i] = num%10;
+                temp = num/10; 
+            }
+            if (num>=10) cc.insert(cc.begin(),temp);
+            return cc;
+        }
+};
+} // namespace l172
 
 int main(){
   
